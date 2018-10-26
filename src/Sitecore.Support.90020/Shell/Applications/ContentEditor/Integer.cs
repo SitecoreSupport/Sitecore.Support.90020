@@ -20,6 +20,11 @@ namespace Sitecore.Support.Shell.Applications.ContentEditor
       {
         return value;
       }
+      else if (result == 0)
+      {
+        // Return zero value without formatting.
+        return "0";
+      }
 
       return result.ToString("#", GetCultureInfo());
     }
